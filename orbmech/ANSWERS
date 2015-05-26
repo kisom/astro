@@ -1,0 +1,82 @@
+---------------------------------------------------------------------------
+PROBLEM 1
+
+$ ./ucm 
+Altitude (km): 200
+Velocity: 7784.26 m/s
+
+SOLUTION:
+      v = 7,784 m/s
+
+---------------------------------------------------------------------------
+PROBLEM 2
+
+$ ./period 
+Altitude (km): 200
+Period is 5309.65s.
+
+SOLUTION:
+      P = 5,310 s
+
+---------------------------------------------------------------------------
+PROBLEM 3
+
+$ ./georadius 
+Orbital period (s): 86164
+GEO radius:   4.21641e+07 m
+GEO altitude: 35786 km
+
+SOLUTION:
+      r = 42,164,170 m
+
+---------------------------------------------------------------------------
+PROBLEM 4
+
+$ ./velocity 
+(Apogee) Altitude (km): 250
+(Perigee) Altitude (km): 500
+Velocity at perigee: 7541.82 m/s
+Velocity at apogee: 7826.29 m/s
+
+SOLUTION:
+      Vp = 7,826 m/s
+      Va = 7,542 m/s
+
+---------------------------------------------------------------------------
+PROBLEM 5
+
+$ ./apogee 
+Perigee altitude:
+Altitude (km): 200
+Velocity (m/s): 7850
+Altitude at apogee: 427.003 km
+
+SOLUTION:
+      Altitude @ apogee = 6,805,140 / 1,000 - 6,378.14 = 427.0 km
+
+---------------------------------------------------------------------------
+PROBLEM 6
+
+$ ./eccentricity 
+Enter altitude at perigee.
+Altitude (km): 200
+Enter velocity at perigee.
+Velocity (m/s): 7850
+Eccentricity: 0.0169617
+
+SOLUTION:
+      e = 0.01696
+
+---------------------------------------------------------------------------
+PROBLEM 7
+
+$ ./altitude 
+Semi-major axis (km): 6700
+Eccentricity: 0.01
+Altitude at apogee:  388.86 km
+Altitude at perigee: 254.86 km
+
+SOLUTION:
+      Altitude @ perigee = 6,633 - 6,378.14 = 254.9 km
+      Altitude @ apogee = 6,767 - 6,378.14 = 388.9 km
+
