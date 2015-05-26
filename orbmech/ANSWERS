@@ -80,3 +80,55 @@ SOLUTION:
       Altitude @ perigee = 6,633 - 6,378.14 = 254.9 km
       Altitude @ apogee = 6,767 - 6,378.14 = 388.9 km
 
+---------------------------------------------------------------------------
+PROBLEM 8
+
+$ ./launch_ap 
+Burnout zenith angle: 89
+(Burnout) Altitude (km): 250
+(Burnout) Velocity (m/s): 7900
+c: 1.92718
+Apoapsis altitude:  223.614 km.
+Periapsis altitude: 796.965 km.
+
+SOLUTION:
+      Altitude @ perigee = 6,601,750 / 1,000 - 6,378.14 = 223.6 km 
+      Altitude @ agogee = 7,175,100 / 1,000 - 6,378.14 = 797.0 km
+
+---------------------------------------------------------------------------
+PROBLEM 9
+
+$ ./launch_e
+Burnout zenith angle: 89
+(Burnout) Altitude (km): 250
+(Burnout) Velocity (m/s): 7900
+Eccentricity: 0.041617
+
+SOLUTION:
+      e = 0.0416170
+
+---------------------------------------------------------------------------
+PROBLEM 10
+
+$ ./launch_v
+Burnout zenith angle: 89
+(Burnout) Altitude (km): 250
+(Burnout) Velocity (m/s): 7900
+Angle from perigee point to launch point is 25.7941 degrees.
+
+SOLUTION:
+     v = 25.794 degrees
+
+---------------------------------------------------------------------------
+PROBLEM 11
+
+$ ./launch_a
+(Burnout) Altitude (km): 250
+(Burnout) Velocity (m/s): 7900
+Semi-major axis: 6888429.6 m
+
+SOLUTION:
+      a = 6,888,430 m
+
+---------------------------------------------------------------------------
+

@@ -8,7 +8,11 @@ TARGETS =	liborbmech.a	\
 		period		\
 		georadius	\
 		ucm		\
-		velocity
+		velocity	\
+		launch_ap	\
+		launch_e	\
+		launch_v	\
+		launch_a
 INCLUDE =	orbmech
 
 all: $(TARGETS)
@@ -41,4 +45,17 @@ georadius: liborbmech.a georadius.cc
 
 velocity: liborbmech.a velocity.cc
 	$(CXX) $(CXXFLAGS) -o $@ velocity.cc $(LDFLAGS)
+
+launch_ap: liborbmech.a launch_ap.cc
+	$(CXX) $(CXXFLAGS) -o $@ launch_ap.cc $(LDFLAGS)
+
+launch_e: liborbmech.a launch_e.cc
+	$(CXX) $(CXXFLAGS) -o $@ launch_e.cc $(LDFLAGS)
+
+launch_v: liborbmech.a launch_v.cc
+	$(CXX) $(CXXFLAGS) -o $@ launch_v.cc $(LDFLAGS)
+
+launch_a: liborbmech.a launch_a.cc
+	$(CXX) $(CXXFLAGS) -o $@ launch_a.cc $(LDFLAGS)
+
 

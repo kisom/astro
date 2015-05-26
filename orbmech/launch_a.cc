@@ -21,106 +21,38 @@
  */
 
 
+/*
+ * Problem:
+ * A satellite is launched into Earth orbit where its launch vehicle burns
+ * out at an altitude of 250 km.  At burnout the satellite's velocity is
+ * 7,900 m/s with the zenith angle equal to 89 degrees.  Calculate the
+ * satellite's semi-major axis.
+*/
+
+
+#include <iomanip>
 #include <iostream>
 #include <cmath>
-
 #include <orbmech/orbmech.h>
+using namespace std;
 
 
-double
-altitude_to_radius(double r)
+int
+main(void)
 {
-	return (r - RADIUS_EARTH) / 1000.0;
+	double	v, alt, a;
+
+	cout << "(Burnout) ";
+	alt = get_altitude();
+
+	cout << "(Burnout) ";
+	v = get_velocity();
+
+	a = 1 / ((2 / alt) - ((v * v) / GM_MU));
+	cout << fixed << setprecision(1) << "Semi-major axis: " << a
+	     << " m\n";
+
+	return 0;
 }
 
 
-double
-radius_to_altitude(double r)
-{
-	return (r / 1000.0) - RADIUS_EARTH;
-}
-
-
-double
-circv(double r)
-{
-	return sqrt(GM_MU / r);
-}
-
-
-double
-get_altitude()
-{
-	double	alt;
-
-	std::cout << "Altitude (km): ";
-	std::cin >> alt;	
-	return (alt + RADIUS_EARTH) * 1000.0;
-}
-
-
-double
-get_velocity()
-{
-	double	v;
-
-	std::cout << "Velocity (m/s): ";
-	std::cin >> v;
-	return v;
-}
-
-
-double
-eccentricity_from_vr(double vp, double rp)
-{
-	return (rp * (vp * vp)) / GM_MU - 1.0;
-}
-
-
-double
-circp(double r)
-{
-	return sqrt(4 * (M_PI * M_PI) * (r * r * r) / GM_MU);
-}
-
-
-static double
-cuberoot(double n)
-{
-	return pow(n, (1.0 / 3.0));
-}
-
-
-double
-circr_from_p(double p)
-{
-	return cuberoot((GM_MU * (p * p)) / (4 * (M_PI * M_PI)));
-}
-
-
-double
-velocity_perigee(double rp, double ra)
-{
-	return sqrt((2.0 * GM_MU * ra) / (rp * (rp + ra)));
-}
-
-
-double
-velocity_apogee(double rp, double ra)
-{
-	return sqrt((2.0 * GM_MU * rp) / (ra * (rp + ra)));
-}
-
-
-double
-deg_to_rad(double deg)
-{
-	return M_PI / 180 * deg;
-}
-
-
-double
-rad_to_deg(double rad)
-{
-	return rad * 180 / M_PI;
-}

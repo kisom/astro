@@ -55,3 +55,33 @@ and apogee.
 
 Source: altitude.cc
 
+---------------------------------------------------------------------------
+PROBLEM 8
+
+A satellite is launched into Earth orbit where its launch vehicle burns
+out at an altitude of 250 km.  At burnout the satellite's velocity is
+7,900 m/s with the zenith angle equal to 89 degrees.  Calculate the
+satellite's altitude at perigee and apogee.
+
+Source: launch_ap.cc
+
+---------------------------------------------------------------------------
+PROBLEM 9
+
+Calculate the eccentricity of the orbit for the satellite in problem 8.
+
+Source: launch_e.cc
+
+---------------------------------------------------------------------------
+PROBLEM 10
+
+Calculate the angle θ from perigee point to launch point for the satellite
+in problem 8.
+
+Source: launch_v.cc
+
+---------------------------------------------------------------------------
+PROBLEM 4.11
+
+Calculate the semi-major axis of the orbit for the satellite in problem 8.
+

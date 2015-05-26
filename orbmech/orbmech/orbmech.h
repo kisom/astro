@@ -40,5 +40,8 @@ double	get_velocity(void);
 double	velocity_perigee(double, double);
 double	velocity_apogee(double, double);
 
+double	deg_to_rad(double);
+double	rad_to_deg(double);
+
 
 #endif
