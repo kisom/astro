@@ -81,7 +81,19 @@ in problem 8.
 Source: launch_v.cc
 
 ---------------------------------------------------------------------------
-PROBLEM 4.11
+PROBLEM 11
 
 Calculate the semi-major axis of the orbit for the satellite in problem 8.
+
+Source: launch_a.cc
+
+---------------------------------------------------------------------------
+PROBLEM 4.12
+
+For the satellite in problem 8, burnout occurs 2000-10-20, 15:00 UT.  The
+geocentric coordinates at burnout are 32o N latitude, 60o W longitude,
+and the azimuth heading is 86o.  Calculate the orbit's inclination,
+argument of perigee, and longitude of ascending node.
+
+Source: launch_param.cc
 
