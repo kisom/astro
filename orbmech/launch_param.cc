@@ -42,18 +42,56 @@ using namespace std;
 int
 main(void)
 {
-	double	c, v, alt, gamma;
-	double	ap, per;
-	double	dis, div, sin_gamma2;
+
+	double	beta;		/* azimuth heading */
+	double	delta;		/* geocentric declination */
+	double	deltalam;	/* Δλ */
+	double	gamma;		/* zenith angle */
+	double	i;		/* inclination */
+	double	l;		/* angular distance between ascending node
+				 * and burnout point. */
+	double	lam1, lam2;	/* λ1 and λ2 */
+	double	nu;		/* true anomaly */
+	double	r;		/* burnout radius */
+	double	tmp;		/* temporary storage */
+	double	v;		/* burnout velocity */
+	double	w;		/* argument of perigee */
 
 	std::cout << "Burnout zenith angle: ";
 	std::cin >> gamma;
 	gamma = deg_to_rad(gamma);
 
 	std::cout << "(Burnout) ";
-	alt = get_altitude();
+	r = get_altitude();
 
 	std::cout << "(Burnout) ";
 	v = get_velocity();
 
+	tmp = (r * (v * v)) / GM_MU;
+	nu = tmp * sin(gamma) * cos(gamma);
+	nu /=  (tmp * (sin(gamma) * sin(gamma)) - 1);
+	nu = atan(nu);
+
+	std::cout << "Burnout geocentric declination: ";
+	cin >> delta;
+	delta = deg_to_rad(delta);
+
+	std::cout << "Burnout geocentric latitude: ";
+	cin >> lam2;
+	lam2  = deg_to_rad(lam2);
+
+	std::cout << "Burnout azimuth heading: ";
+	cin >> beta;
+	beta = deg_to_rad(beta);
+
+	i = acos(cos(delta) * sin(beta));
+	std::cout << "Inclination: " << rad_to_deg(i) << " deg.\n";
+
+	l = atan(tan(delta) / cos(beta));
+	w = l - nu;
+	std::cout << "Argument of perigee: " << rad_to_deg(w) << " deg.\n";
+
+	deltalam = atan(sin(delta) * tan(beta));
+	lam1 =  lam2 - deltalam;
+	std::cout << "λ1: " << rad_to_deg(lam1)  << " deg longitude.\n";
 }

@@ -12,7 +12,8 @@ TARGETS =	liborbmech.a	\
 		launch_ap	\
 		launch_e	\
 		launch_v	\
-		launch_a
+		launch_a	\
+		launch_param
 INCLUDE =	orbmech
 
 all: $(TARGETS)
@@ -57,5 +58,8 @@ launch_v: liborbmech.a launch_v.cc
 
 launch_a: liborbmech.a launch_a.cc
 	$(CXX) $(CXXFLAGS) -o $@ launch_a.cc $(LDFLAGS)
+
+launch_param: liborbmech.a launch_param.cc
+	$(CXX) $(CXXFLAGS) -o $@ launch_param.cc $(LDFLAGS)
 
 

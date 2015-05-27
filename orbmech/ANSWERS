@@ -132,3 +132,25 @@ SOLUTION:
 
 ---------------------------------------------------------------------------
 PROBLEM 12
+
+$ ./launch_param 
+Burnout zenith angle: 89
+(Burnout) Altitude (km): 250
+(Burnout) Velocity (m/s): 7900
+Burnout geocentric declination: 32
+Burnout geocentric latitude: -60
+Burnout azimuth heading: 86
+Inclination: 32.2227 deg.
+Argument of perigee: 57.8362 deg.
+λ1: -142.483 deg longitude.
+
+Ω  computed: 7h 7m 51.1s
+http://www.csgnetwork.com/siderealjuliantimecalc.html
+
+SOLUTION:
+      i = 32.223 deg
+      ω = 57.836 deg
+      Ω = Sidereal time at -142.483 longitude, 2000-10-20, 15:00 UT 
+      Ω = 7h 27' 34" = 111.892 deg
+
+
