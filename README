@@ -2,3 +2,4 @@ Various astronomical software.
 
 bosf/			From a tutorial on orbital mechanics (Basics of
 			Space Flight, http://braeunig.us/space/)
+orbmech/		Orbital mechanics library.
